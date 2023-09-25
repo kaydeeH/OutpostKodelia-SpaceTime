@@ -1,0 +1,25 @@
+#config_version=5
+
+config:
+  - coils.yaml
+  - displays.yaml
+  - keyboard.yaml
+  - slides.yaml
+  - switches.yaml
+
+playfields:
+  playfield:
+    tags: default
+    default_source_device: bd_drain
+
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left
+    activation_switch: s_left_flipper
+    enable_events: machine_reset_phase_3
+  right_flipper:
+    main_coil: c_flipper_right
+    activation_switch: s_right_flipper
+    enable_events: machine_reset_phase_3
+
+virtual_platform_start_active_switches: s_drain

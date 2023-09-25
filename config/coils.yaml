@@ -1,0 +1,24 @@
+#config_version=5
+
+coils:
+  c_flipper_left:
+    number: 0
+    allow_enable: true
+    default_hold_power: 0.125
+#    default_pulse_ms: 20
+  c_flipper_right:
+    number: 1
+    allow_enable: true
+    default_hold_power: 0.125
+#    default_pulse_ms: 20
+  c_drain_eject:
+    number: 2
+    default_pulse_ms: 20
+
+ball_devices:
+  bd_drain:
+    ball_switches: s_drain
+    eject_coil: c_drain_eject
+    tags: drain, home, trough
+    eject_timeouts: 3s
+    debug: true
