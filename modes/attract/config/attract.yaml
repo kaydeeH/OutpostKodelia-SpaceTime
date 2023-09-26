@@ -4,9 +4,14 @@
 #!   events: ok_super
 ##! mode: attract
 
+event_player:
+  mode_attract_started:
+    - init_done
+
+
 show_player:
-  mode_attract_started: attract_display_loop
-  mode_attract_started.1: attract_light_show
+  mode_attract_started: attract_light_show
+#  mode_attract_started.1: attract_display_loop
 ##! test
 #! mock_event ok_super
 #! advance_time_and_run .1

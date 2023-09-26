@@ -1,6 +1,7 @@
 #config_version=5
 
 slides:
+  screen_segement_display: []
   welcome_slide:
     widgets:
       - type: text
@@ -15,7 +16,7 @@ slides:
       - text: ATTRACT MODE
         type: text
 
-slide_player:
-  init_done: welcome_slide
+#slide_player:
+#  init_done: welcome_slide
 
 

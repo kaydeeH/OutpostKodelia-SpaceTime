@@ -1,6 +1,7 @@
 #config_version=5
 
 config:
+  - assets.yaml
   - coils.yaml
   - displays.yaml
   - hardware.yaml
@@ -8,6 +9,7 @@ config:
   - lights.yaml
   - slides.yaml
   - switches.yaml
+  - widgets.yaml
 
 modes:
 # base modules
@@ -21,6 +23,24 @@ modes:
   - listener
   - kicker
   - tunnel
+
+slide_player:
+  init_done: screen_segement_display
+
+widget_player:
+  init_done:
+    backglass:
+      slide: screen_segement_display
+    display1:
+      slide: screen_segement_display
+    display2:
+      slide: screen_segement_display
+    display3:
+      slide: screen_segement_display
+    display4:
+      slide: screen_segement_display
+    display5:
+      slide: screen_segement_display
 
 #  - service
 #  Service is disabled due to an error --

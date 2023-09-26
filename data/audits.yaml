@@ -1,6 +1,6 @@
 events:
   game_ended: 12
-  game_started: 23
+  game_started: 26
 player:
   score:
     average: 949.3333333333334
@@ -72,7 +72,7 @@ switches:
   s_saucer_right: 6
   s_slingshot_left: 4
   s_slingshot_right: 8
-  s_start: 6
+  s_start: 8
   s_target_100: 5
   s_target_center_collect_tunnel: 8
   s_target_extra_ball: 3
