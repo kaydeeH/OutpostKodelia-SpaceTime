@@ -19,6 +19,15 @@ switches:
   s_bumper_right_middle:
     number:
     tags: playfield_active
+  s_coin_left:
+    number:
+    tags: playfield_active
+  s_coin_center:
+    number:
+    tags: playfield_active
+  s_coin_right:
+    number:
+    tags: playfield_active
   s_downpost_left:
     number:
     tags: playfield_active
@@ -33,25 +42,18 @@ switches:
     tags: playfield_active
   s_kicker:
     number:
-    tags: playfield_active
   s_pop_left_top:
     number:
-    tags: playfield_active
   s_pop_left_bottom:
     number:
-    tags: playfield_active
   s_pop_right_top:
     number:
-    tags: playfield_active
   s_pop_right_bottom:
     number:
-    tags: playfield_active
   s_slingshot_left:
     number:
-    tags: playfield_active
   s_slingshot_right:
     number:
-    tags: playfield_active
   s_target_100:
     number:
     tags: playfield_active
@@ -93,10 +95,8 @@ switches:
     tags: playfield_outlane
   s_saucer_left:
     number:
-    tags: playfield_active
   s_saucer_right:
     number:
-    tags: playfield_active
   s_left_flipper:
     number:
     tags: left_flipper

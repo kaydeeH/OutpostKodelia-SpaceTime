@@ -1,0 +1,19 @@
+#config_version=5
+
+# THIS LISTENS FOR THE FOLLOWING:
+#
+# do_check_extra_ball
+# apply_up_post
+# apply_down_post
+
+mode:
+  start_events: ball_started
+  priority: 100
+
+event_player:
+  do_check_extra_ball:
+    - nothing
+  apply_up_post:
+    - nothing
+  apply_down_post:
+    - nothing

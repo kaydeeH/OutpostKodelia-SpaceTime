@@ -3,23 +3,25 @@
 config:
   - coils.yaml
   - displays.yaml
+  - hardware.yaml
   - keyboard.yaml
+  - lights.yaml
   - slides.yaml
   - switches.yaml
 
-playfields:
-  playfield:
-    tags: default
-    default_source_device: bd_drain
+modes:
+# base modules
+  - base
+  - tilt
+# game logic
+  - gates
+  - pops
+  - bumpers
+  - fixed
+  - listener
+  - kicker
+  - tunnel
 
-flippers:
-  left_flipper:
-    main_coil: c_flipper_left
-    activation_switch: s_left_flipper
-    enable_events: machine_reset_phase_3
-  right_flipper:
-    main_coil: c_flipper_right
-    activation_switch: s_right_flipper
-    enable_events: machine_reset_phase_3
-
-virtual_platform_start_active_switches: s_drain
+#  - service
+#  Service is disabled due to an error --
+#  mpfmc.core.audio.audio_exception.AudioException: 'sfx' is not a valid track name. Could not create sound 'power_off' asset

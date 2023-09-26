@@ -2,7 +2,12 @@
 
 keyboard:
 
-
+  1:
+    switch: s_coin_left
+  2:
+    switch: s_coin_center
+  3:
+    switch: s_coin_right
   4:
     switch: s_pop_left_top
   5:

@@ -1,0 +1,17 @@
+#config_version=5
+
+# This mode responds to events from other modes -
+#
+# stop_tunnel_value, start_tunnel_value, collect_tunnel_value
+
+mode:
+  start_events: ball_started
+  priority: 100
+
+event_player:
+  stop_tunnel_value:
+    - nothing
+  start_tunnel_value:
+    - nothing
+  collect_tunnel_value:
+    - nothing

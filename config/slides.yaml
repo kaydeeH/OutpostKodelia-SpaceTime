@@ -17,4 +17,5 @@ slides:
 
 slide_player:
   init_done: welcome_slide
-  mode_attract_started: attract_started
+
+
