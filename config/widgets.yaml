@@ -5,107 +5,306 @@
 widgets:
   backglass:
     - type: image
-      image: SpaceTimeBackglass
+      image: SpaceTimeBackglass_SM_wMask
       z: 10
+  backglass_player_1:
+    - type: quad
+      points: 185,33,198,33,180,16,166,16
+      color: f7941cff
+      z: 300
+  backglass_player_2:
+    - type: quad
+      points: 207,33,221,33,209,15,193,18
+      color: fefe00ff
+      z: 300
+  backglass_player_3:
+    - type: quad
+      points: 229,33,241,32,236,14,217,14
+      color: cc0433ff
+      z: 300
+  backglass_player_4:
+    - type: quad
+      points: 248,33,262,33,260,14,242,14
+      color: 01662eff
+      z: 300
+  backglass_score_player_1:
+    - type: ellipse
+      x: 352
+      y: 369
+      z: 300
+      width: 41
+      height: 41
+      color: black
+  backglass_score_player_2:
+    - type: ellipse
+      x: 449
+      y: 369
+      z: 300
+      width: 41
+      height: 41
+      color: black
+  backglass_score_player_3:
+    - type: ellipse
+      x: 352
+      y: 99
+      z: 300
+      width: 41
+      height: 41
+      color: black
+  backglass_score_player_4:
+    - type: ellipse
+      x: 449
+      y: 99
+      z: 300
+      width: 41
+      height: 41
+      color: black
+
+  backglass_tilt:
+    - type: rectangle
+      x: 410
+      y: 26
+      z: 300
+      width: 60
+      height: 20
+      color: black
+  backglass_ball_in_play_1:
+    - type: ellipse
+      x: 462
+      y: 26
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_ball_in_play_2:
+    - type: ellipse
+      x: 484
+      y: 26
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_ball_in_play_3:
+    - type: ellipse
+      x: 505
+      y: 26
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_ball_in_play_4:
+    - type: ellipse
+      x: 537
+      y: 26
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_ball_in_play_5:
+    - type: ellipse
+      x: 558
+      y: 26
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_game_over:
+    - type: rectangle
+      x: 616
+      y: 26
+      z: 300
+      width: 68
+      height: 20
+      color: black
+  backglass_match_10:
+    - type: ellipse
+      x: 318
+      y: 443
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_match_20:
+    - type: ellipse
+      x: 340
+      y: 443
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_match_30:
+    - type: ellipse
+      x: 363
+      y: 443
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_match_40:
+    - type: ellipse
+      x: 388
+      y: 443
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_match_50:
+    - type: ellipse
+      x: 410
+      y: 443
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_match_60:
+    - type: ellipse
+      x: 434
+      y: 443
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_match_70:
+    - type: ellipse
+      x: 457
+      y: 443
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_match_80:
+    - type: ellipse
+      x: 480
+      y: 443
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_match_90:
+    - type: ellipse
+      x: 503
+      y: 443
+      z: 300
+      width: 20
+      height: 20
+      color: black
+  backglass_same_shoots_again:
+    - type: rectangle
+      x: 563
+      y: 444
+      z: 300
+      width: 58
+      height: 18
+      color: black
 
   display1:
     - type: segment_display_emulator
       name: display1
-      character_count: 7
-      character_slant_angle: 5
-      character_spacing: 5
+      display_type: 7seg
+      character_count: 5
+      padding: 0
+      character_spacing: 15
       segment_width: 0.1
       segment_interval: .02
-      segment_off_color: 4b4c4a30
-      segment_on_color: ffa500ff
-      side_bevel_enabled: true
-      dot_enabled: true
-      comma_enabled: true
-      text: ""
-      width: 135
-      height: 60
+      segment_off_color: ffffffff
+      segment_on_color: 000000ff
+      side_bevel_enabled: false
+      background_color: ffffffff
+      dot_enabled: false
+      comma_enabled: false
+      text: "11111"
+      width: 150
+      height: 22
       x: 245
-      y: 347
-      z: 2
+      y: 368
+      z: 200
 
   display2:
     - type: segment_display_emulator
       name: display2
-      character_count: 7
-      character_slant_angle: 5
-      character_spacing: 5
+      display_type: 7seg
+      character_count: 5
+      padding: 0
+      character_spacing: 15
       segment_width: 0.1
       segment_interval: .02
-      segment_off_color: 4b4c4a30
-      segment_on_color: ffa500ff
-      side_bevel_enabled: true
-      dot_enabled: true
-      comma_enabled: true
-      text: ""
-      width: 135
-      height: 60
+      segment_off_color: ffffffff
+      segment_on_color: 000000ff
+      side_bevel_enabled: false
+      background_color: ffffffff
+      dot_enabled: false
+      comma_enabled: false
+      text: "22222"
+      width: 150
+      height: 22
       x: 555
-      y: 347
-      z: 2
+      y: 368
+      z: 200
 
   display3:
     - type: segment_display_emulator
       name: display3
-      character_count: 7
-      character_slant_angle: 5
-      character_spacing: 5
+      display_type: 7seg
+      character_count: 5
+      padding: 0
+      character_spacing: 15
       segment_width: 0.1
       segment_interval: .02
-      segment_off_color: 4b4c4a30
-      segment_on_color: ffa500ff
-      side_bevel_enabled: true
-      dot_enabled: true
-      comma_enabled: true
-      text: ""
-      width: 135
-      height: 60
+      segment_off_color: ffffffff
+      segment_on_color: 000000ff
+      side_bevel_enabled: false
+      background_color: ffffffff
+      dot_enabled: false
+      comma_enabled: false
+      text: "33333"
+      width: 150
+      height: 22
       x: 245
-      y: 97
-      z: 2
+      y: 98
+      z: 200
 
   display4:
     - type: segment_display_emulator
       name: display4
-      character_count: 7
-      character_slant_angle: 5
-      character_spacing: 5
+      display_type: 7seg
+      character_count: 5
+      padding: 0
+      character_spacing: 15
       segment_width: 0.1
       segment_interval: .02
-      segment_off_color: 4b4c4a30
-      segment_on_color: ffa500ff
-      side_bevel_enabled: true
-      dot_enabled: true
-      comma_enabled: true
-      text: ""
-      width: 135
-      height: 60
-      x: 555
-      y: 97
-      z: 2
+      segment_off_color: ffffffff
+      segment_on_color: 000000ff
+      side_bevel_enabled: false
+      background_color: ffffffff
+      dot_enabled: false
+      comma_enabled: false
+      text: "44444"
+      width: 150
+      height: 22
+      x: 553
+      y: 99
+      z: 200
 
   display5:
     - type: segment_display_emulator
       name: display5
-      character_count: 7
-      character_slant_angle: 5
-      character_spacing: 5
+      display_type: 7seg
+      character_count: 2
+      padding: 0
+      character_spacing: 1
       segment_width: 0.1
       segment_interval: .02
-      segment_off_color: 4b4c4a30
-      segment_on_color: ffa500ff
-      side_bevel_enabled: true
-      dot_enabled: true
-      comma_enabled: true
-      text: ""
-      width: 140
-      height: 60
-      x: 562
-      y: 258
-      z: 2
+      segment_off_color: ffffffff
+      segment_on_color: 000000ff
+      side_bevel_enabled: false
+      background_color: ffffffff
+      dot_enabled: false
+      comma_enabled: false
+      text: "55"
+      width: 12
+      height: 12
+      x: 422.5
+      y: 262.5
+      z: 200
 
 

@@ -7,8 +7,42 @@
 event_player:
   mode_attract_started:
     - init_done
+    - play_test_on_segment|2s
+    - play_another_test|4s
 
-
+segment_display_player:
+  play_test_on_segment:
+    display1:
+      text: "00000"
+      color: black
+    display2:
+      text: "00000"
+      color: black
+    display3:
+      text: "00000"
+      color: black
+    display4:
+      text: "00000"
+      color: black
+    display5:
+      text: "00"
+      color: black
+  play_another_test:
+    display1:
+      text: "98760"
+      color: black
+    display2:
+      text: "54320"
+      color: black
+    display3:
+      text: "10980"
+      color: black
+    display4:
+      text: "76540"
+      color: black
+    display5:
+      text: "01"
+      color: black
 show_player:
   mode_attract_started: attract_light_show
 #  mode_attract_started.1: attract_display_loop

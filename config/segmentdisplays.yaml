@@ -1,0 +1,91 @@
+#config_version=5
+
+hardware:
+  segment_displays: light_segment_displays
+
+segment_displays:
+  display1:
+    size: 5
+    number: 1
+    default_transition_update_hz: 24
+  display2:
+    size: 5
+    number: 1
+    default_transition_update_hz: 24
+  display3:
+    size: 5
+    number: 1
+    default_transition_update_hz: 24
+  display4:
+    size: 5
+    number: 1
+    default_transition_update_hz: 24
+  display5:
+    size: 2
+    number: 1
+    default_transition_update_hz: 24
+
+
+# Screen display version of segment displays & backglass
+virtual_segment_display_connector:
+  segment_displays: display1, display2, display3, display4, display5
+
+segment_display_player:
+  # init displays on game start
+  game_started:
+    display1:
+      text: "00000"
+    display2:
+      text: "00000"
+    display3:
+      text: "00000"
+    display4:
+      text: "00000"
+#    display5:
+#      text: "P{current_player.number:d} B{current_player.ball:d}"
+
+# show score when adding players
+  player_added.1{num==1}:
+    display1:
+      text: "{players[0].score:d}"
+      priority: 10
+    display2:
+      text: "{players[1].score:d}"
+      priority: 10
+    display3:
+      text: "{players[2].score:d}"
+      priority: 10
+    display4:
+      text: "{players[3].score:d}"
+      priority: 10
+
+  # clear only display5 after game
+  game_ended{machine.player1_score > 0}:
+    display1:
+      text: "{machine.player1_score:d}"
+  game_ended{machine.player2_score > 0}:
+    display2:
+      text: "{machine.player2_score:d}"
+  game_ended{machine.player3_score > 0}:
+    display3:
+      text: "{machine.player3_score:d}"
+  game_ended{machine.player4_score > 0}:
+    display4:
+      text: "{machine.player4_score:d}"
+  game_ended:
+    display5:
+      text: ""
+
+  player_score:
+    display1:
+      text: "{players[0].score:d}"
+      priority: 10
+    display2:
+      text: "{players[1].score:d}"
+      priority: 10
+    display3:
+      text: "{players[2].score:d}"
+      priority: 10
+    display4:
+      text: "{players[3].score:d}"
+      priority: 10

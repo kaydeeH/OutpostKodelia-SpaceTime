@@ -10,10 +10,13 @@ config:
   - slides.yaml
   - switches.yaml
   - widgets.yaml
+  - widgetstyles.yaml
+  - segmentdisplays.yaml
 
 modes:
 # base modules
   - base
+  - game
   - tilt
 # game logic
   - gates
@@ -31,6 +34,57 @@ widget_player:
   init_done:
     backglass:
       slide: screen_segement_display
+    backglass_player_1:
+      slide: screen_segement_display
+    backglass_player_2:
+      slide: screen_segement_display
+    backglass_player_3:
+      slide: screen_segement_display
+    backglass_player_4:
+      slide: screen_segement_display
+    backglass_score_player_1:
+      slide: screen_segement_display
+    backglass_score_player_2:
+      slide: screen_segement_display
+    backglass_score_player_3:
+      slide: screen_segement_display
+    backglass_score_player_4:
+      slide: screen_segement_display
+    backglass_tilt:
+      slide: screen_segement_display
+    backglass_ball_in_play_1:
+      slide: screen_segement_display
+    backglass_ball_in_play_2:
+      slide: screen_segement_display
+    backglass_ball_in_play_3:
+      slide: screen_segement_display
+    backglass_ball_in_play_4:
+      slide: screen_segement_display
+    backglass_ball_in_play_5:
+      slide: screen_segement_display
+    backglass_game_over:
+      slide: screen_segement_display
+      action: remove
+    backglass_match_10:
+      slide: screen_segement_display
+    backglass_match_20:
+      slide: screen_segement_display
+    backglass_match_30:
+      slide: screen_segement_display
+    backglass_match_40:
+      slide: screen_segement_display
+    backglass_match_50:
+      slide: screen_segement_display
+    backglass_match_60:
+      slide: screen_segement_display
+    backglass_match_70:
+      slide: screen_segement_display
+    backglass_match_80:
+      slide: screen_segement_display
+    backglass_match_90:
+      slide: screen_segement_display
+    backglass_same_shoots_again:
+      slide: screen_segement_display
     display1:
       slide: screen_segement_display
     display2:
@@ -40,6 +94,150 @@ widget_player:
     display4:
       slide: screen_segement_display
     display5:
+      slide: screen_segement_display
+
+  listener_start:
+    backglass_game_over:
+      slide: screen_segement_display
+  player_added{num==1}:
+    backglass_player_1:
+      action: remove
+      slide: screen_segement_display
+    backglass_player_2:
+      slide: screen_segement_display
+    backglass_player_3:
+      slide: screen_segement_display
+    backglass_player_4:
+      slide: screen_segement_display
+  player_added{num==2}:
+    backglass_player_1:
+      slide: screen_segement_display
+    backglass_player_2:
+      action: remove
+      slide: screen_segement_display
+    backglass_player_3:
+      slide: screen_segement_display
+    backglass_player_4:
+      slide: screen_segement_display
+  player_added{num==3}:
+    backglass_player_1:
+      slide: screen_segement_display
+    backglass_player_2:
+      slide: screen_segement_display
+    backglass_player_3:
+      action: remove
+      slide: screen_segement_display
+    backglass_player_4:
+      slide: screen_segement_display
+  player_added{num==4}:
+    backglass_player_1:
+      slide: screen_segement_display
+    backglass_player_2:
+      slide: screen_segement_display
+    backglass_player_3:
+      slide: screen_segement_display
+    backglass_player_4:
+      action: remove
+      slide: screen_segement_display
+  player_turn_started{number==1}:
+    backglass_score_player_1:
+      action: remove
+      slide: screen_segement_display
+    backglass_score_player_2:
+      slide: screen_segement_display
+    backglass_score_player_3:
+      slide: screen_segement_display
+    backglass_score_player_4:
+      slide: screen_segement_display
+  player_turn_started{number==2}:
+    backglass_score_player_1:
+      slide: screen_segement_display
+    backglass_score_player_2:
+      action: remove
+      slide: screen_segement_display
+    backglass_score_player_3:
+      slide: screen_segement_display
+    backglass_score_player_4:
+      slide: screen_segement_display
+  player_turn_started{number==3}:
+    backglass_score_player_1:
+      slide: screen_segement_display
+    backglass_score_player_2:
+      slide: screen_segement_display
+    backglass_score_player_3:
+      action: remove
+      slide: screen_segement_display
+    backglass_score_player_4:
+      slide: screen_segement_display
+  player_turn_started{number==4}:
+    backglass_score_player_1:
+      slide: screen_segement_display
+    backglass_score_player_2:
+      slide: screen_segement_display
+    backglass_score_player_3:
+      slide: screen_segement_display
+    backglass_score_player_4:
+      action: remove
+      slide: screen_segement_display
+  ball_started{ball==1}:
+    backglass_ball_in_play_1:
+      action: remove
+      slide: screen_segement_display
+    backglass_ball_in_play_2:
+      slide: screen_segement_display
+    backglass_ball_in_play_3:
+      slide: screen_segement_display
+    backglass_ball_in_play_4:
+      slide: screen_segement_display
+    backglass_ball_in_play_5:
+      slide: screen_segement_display
+  ball_started{ball==2}:
+    backglass_ball_in_play_1:
+      slide: screen_segement_display
+    backglass_ball_in_play_2:
+      action: remove
+      slide: screen_segement_display
+    backglass_ball_in_play_3:
+      slide: screen_segement_display
+    backglass_ball_in_play_4:
+      slide: screen_segement_display
+    backglass_ball_in_play_5:
+      slide: screen_segement_display
+  ball_started{ball==3}:
+    backglass_ball_in_play_1:
+      slide: screen_segement_display
+    backglass_ball_in_play_2:
+      slide: screen_segement_display
+    backglass_ball_in_play_3:
+      action: remove
+      slide: screen_segement_display
+    backglass_ball_in_play_4:
+      slide: screen_segement_display
+    backglass_ball_in_play_5:
+      slide: screen_segement_display
+  ball_started{ball==4}:
+    backglass_ball_in_play_1:
+      slide: screen_segement_display
+    backglass_ball_in_play_2:
+      slide: screen_segement_display
+    backglass_ball_in_play_3:
+      slide: screen_segement_display
+    backglass_ball_in_play_4:
+      action: remove
+      slide: screen_segement_display
+    backglass_ball_in_play_5:
+      slide: screen_segement_display
+  ball_started{ball==5}:
+    backglass_ball_in_play_1:
+      slide: screen_segement_display
+    backglass_ball_in_play_2:
+      slide: screen_segement_display
+    backglass_ball_in_play_3:
+      slide: screen_segement_display
+    backglass_ball_in_play_4:
+      slide: screen_segement_display
+    backglass_ball_in_play_5:
+      action: remove
       slide: screen_segement_display
 
 #  - service
